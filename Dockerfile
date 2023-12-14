@@ -1,11 +1,9 @@
 FROM  rocker/verse
 
-#Install packages
 RUN R -e "install.packages('readr', dependencies=TRUE)"
 RUN R -e "install.packages('tidyverse', dependencies=TRUE)"
+RUN R -e "install.packages('tidyr', dependencies=TRUE)"
 RUN R -e "install.packages('dplyr', dependencies=TRUE)"
-RUN R -e "install.packages('stringr', dependencies=TRUE)"
-RUN R -e "install.packages('janitor', dependencies=TRUE)"
 RUN R -e "install.packages('R.utils', dependencies=TRUE)"
 RUN R -e "install.packages('ggplot2', dependencies=TRUE)"
 RUN R -e "install.packages('matlab', dependencies=TRUE)"
@@ -13,8 +11,16 @@ RUN R -e "install.packages('plotly', dependencies=TRUE)"
 RUN R -e "install.packages('htmlwidgets', dependencies=TRUE)"
 RUN R -e "install.packages('aricode', dependencies=TRUE)"
 RUN R -e "install.packages('mclust', dependencies=TRUE)"
-
-#Introduce Python3 for tSNE
-RUN apt update && apt install -y python3 python3-pip
-
-RUN pip3 install numpy scikit-learn pandas
+RUN R -e "install.packages('FactoMineR', dependencies=TRUE)"
+RUN R -e "install.packages('factoextra', dependencies=TRUE)"
+RUN R -e "install.packages('reshape2', dependencies=TRUE)"
+RUN R -e "install.packages('corrplot', dependencies=TRUE)"
+RUN R -e "install.packages('dendextend', dependencies=TRUE)"
+RUN R -e "install.packages('gridExtra', dependencies=TRUE)"
+RUN R -e "install.packages('Boruta', dependencies=TRUE)" 
+RUN R -e "install.packages('caret', dependencies=TRUE)"
+RUN R -e "install.packages('randomForest', dependencies=TRUE)"
+RUN R -e "install.packages('gam', dependencies=TRUE)"
+RUN R -e "install.packages('cluster', dependencies=TRUE)"
+RUN R -e "install.packages('patchwork', dependencies=TRUE)"
+RUN R -e "install.packages('rmarkdown', dependencies=TRUE)"
