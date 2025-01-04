@@ -1,6 +1,6 @@
 # BIOS611 Final Project
 
-## Exploring the Reasons behind the Cause of Cervical Cancer
+## Investigating the Causes of Cervical Cancer
 
 Hi, this is my 611 Data Science Project. More to come.
 
